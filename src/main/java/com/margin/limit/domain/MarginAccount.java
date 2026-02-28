@@ -20,6 +20,9 @@ public class MarginAccount {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
+    @Version
+    private Long version; // <--- ADDED THIS FIELD for Optimistic Locking
+
     @Column(name = "client_id", nullable = false, unique = true)
     private String clientId;
 
