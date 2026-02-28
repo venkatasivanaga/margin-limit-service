@@ -18,4 +18,24 @@ This service acts as a "Risk Gatekeeper." It evaluates incoming trade requests a
 3. **Observability:** Integrated Actuator and Micrometer metrics for real-time monitoring.
 
 ## Local Development
-*(Instructions to be added once Docker Compose is configured)*
+
+### Prerequisites
+* Docker & Docker Compose
+* Java 21 (if running locally outside of Docker)
+
+### Running the Application (Recommended)
+You can spin up the entire stack (API, PostgreSQL, MongoDB) using Docker Compose:
+
+`docker-compose up -d --build`
+
+The service will be available at `http://localhost:8080`.
+
+### API Documentation
+Once the application is running, you can explore and test the REST endpoints interactively via the Swagger UI:
+* **Swagger UI:** http://localhost:8080/swagger-ui.html
+* **Metrics (Actuator):** http://localhost:8080/actuator/metrics
+
+### Running Tests
+To run the integration tests (which utilize Testcontainers to spin up ephemeral databases), run:
+
+`./mvnw clean test`
