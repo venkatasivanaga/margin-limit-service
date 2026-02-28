@@ -20,3 +20,16 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017/margin_audit_db
+
+# NEW BLOCK: Expose health and metrics endpoints
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics,prometheus
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    tags:
+      application: ${spring.application.name}
