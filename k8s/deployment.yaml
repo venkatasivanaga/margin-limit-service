@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: margin-api
+  labels:
+    app: margin-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: margin-api
+  template:
+    metadata:
+      labels:
+        app: margin-api
+    spec:
+      containers:
+        - name: margin-api
+          image: your-dockerhub-username/margin-limit-service:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: margin-config
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: margin-api-service
+spec:
+  type: ClusterIP
+  selector:
+    app: margin-api
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080

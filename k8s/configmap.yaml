@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: margin-config
+data:
+  SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/margin_db
+  SPRING_DATA_MONGODB_URI: mongodb://mongo:27017/margin_audit_db
