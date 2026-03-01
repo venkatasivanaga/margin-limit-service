@@ -9,7 +9,7 @@ This service acts as a "Risk Gatekeeper." It evaluates incoming trade requests a
 * **Core Database (Relational):** PostgreSQL (Managed via Flyway)
 * **Audit Database (NoSQL):** MongoDB
 * **Testing:** JUnit 5, Mockito, Testcontainers
-* **DevOps:** Docker, GitHub Actions, Kubernetes
+* **DevOps:** Docker, GitHub Actions, Kubernetes 
 
 ## System Architecture
 
