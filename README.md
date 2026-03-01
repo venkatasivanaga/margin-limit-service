@@ -26,16 +26,21 @@ This service acts as a "Risk Gatekeeper." It evaluates incoming trade requests a
 ### Running the Application (Recommended)
 You can spin up the entire stack (API, PostgreSQL, MongoDB) using Docker Compose:
 
-`docker-compose up -d --build`
+```bash
+docker-compose up -d --build
+```
 
 The service will be available at `http://localhost:8080`.
 
 ### API Documentation
 Once the application is running, you can explore and test the REST endpoints interactively via the Swagger UI:
-* **Swagger UI:** http://localhost:8080/swagger-ui.html
-* **Metrics (Actuator):** http://localhost:8080/actuator/metrics
+* **Swagger UI:** [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+* **Metrics (Actuator):** [http://localhost:8080/actuator/metrics](http://localhost:8080/actuator/metrics)
 
 ### Running Tests
-To run the integration tests (which utilize Testcontainers to spin up ephemeral databases), run:
+To run the integration tests, run:
 
-`./mvnw clean test`
+```bash
+mvn clean test
+```
+
