@@ -9,7 +9,7 @@ This service acts as a "Risk Gatekeeper." It evaluates incoming trade requests a
 * **Core Database (Relational):** PostgreSQL (Managed via Flyway)
 * **Audit Database (NoSQL):** MongoDB
 * **Testing:** JUnit 5, Mockito, Testcontainers
-* **DevOps:** Docker, GitHub Actions, Kubernetes 
+* **DevOps:** Docker, GitHub Actions, Kubernetes
 
 ## System Architecture
 
@@ -21,7 +21,7 @@ This service acts as a "Risk Gatekeeper." It evaluates incoming trade requests a
 
 ### Prerequisites
 * Docker & Docker Compose
-* Java 21 (if running locally outside of Docker)
+* Java 21 (incase if you are running locally outside of Docker) 
 
 ### Running the Application (Recommended)
 You can spin up the entire stack (API, PostgreSQL, MongoDB) using Docker Compose:
